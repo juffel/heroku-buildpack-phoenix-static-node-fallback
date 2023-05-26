@@ -34,7 +34,7 @@ download_node() {
     # if [ "$code" != "200" ]; then
     #   echo "Unable to download node: $code" && false
     # fi
-    local code=$(curl "https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.gz" -L --silent --fail --retry 5 --retry-max-time 15 -o ${cached_node} --write-out "%{http_code}")
+    local code=$(curl "https://nodejs.org/dist/v14.19.1/node-v14.19.1-linux-x64.tar.gz" -L --silent --fail --retry 5 --retry-max-time 15 -o ${cached_node} --write-out "%{http_code}")
   else
     info "Using cached node ${node_version}..."
   fi
